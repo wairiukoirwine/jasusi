@@ -80,7 +80,7 @@ def combine(
         applied.append(
             Evidence(
                 "rule_reversal",
-                "Genuine M-Pesa reversals are done by Safaricom, not by sending money back yourself",
+                "Real M-Pesa reversals are done by Safaricom, not by sending money back",
                 0.7,
             )
         )
