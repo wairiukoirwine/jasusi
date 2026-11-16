@@ -1,0 +1,29 @@
+# secrets
+.env
+*.key
+
+# data & models (never commit real messages)
+data/
+ml/models/
+mlruns/
+*.onnx
+*.pt
+*.bin
+*.safetensors
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+
+# node
+node_modules/
+dist/
+
+# os / editors
+.DS_Store
+.vscode/
+.idea/

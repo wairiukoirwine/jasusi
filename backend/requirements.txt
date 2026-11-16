@@ -1,0 +1,5 @@
+# Runtime dependencies for the JASUSI API (M0). Add more only per milestone.
+fastapi>=0.163,<1.0
+uvicorn[standard]>=0.54,<1.0
+pydantic>=2.14,<3.0
+pydantic-settings>=2.16,<3.0
