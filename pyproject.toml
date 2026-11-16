@@ -16,6 +16,7 @@ select = ["E", "W", "F", "I", "B", "UP", "S"]
 "backend/app/detectors/rules.py" = ["E501"]  # one regex per line reads better
 "backend/app/extract/anonymise.py" = ["E501"]
 "ml/training/*" = ["E501"]  # report templates and long sklearn calls
+"scripts/*" = ["E501"]  # example messages
 
 [tool.ruff.lint.isort]
 known-first-party = ["app", "ml"]

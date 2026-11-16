@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* Colour roles. Verdicts use a reserved status palette and always appear with an icon and a
+   label, never as colour alone. Dark values are chosen per role, not inverted. */
+:root {
+  color-scheme: light;
+  --page: #f4f3ef;
+  --surface: #fcfcfb;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --ink-3: #7a7973;
+  --line: #e1e0d9;
+  --axis: #c3c2b7;
+  --accent: #2a78d6;
+  --good: #0ca30c;
+  --good-ink: #006300;
+  --warning: #fab219;
+  --warning-ink: #7a5200;
+  --critical: #d03b3b;
+  --critical-ink: #a82222;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --page: #111110;
+    --surface: #1a1a19;
+    --ink: #f0efec;
+    --ink-2: #c3c2b7;
+    --ink-3: #8f8e87;
+    --line: #2c2c2a;
+    --axis: #383835;
+    --accent: #3987e5;
+    --good-ink: #3fc13f;
+    --warning-ink: #fab219;
+    --critical: #e05252;
+    --critical-ink: #f08a8a;
+  }
+}
+
+body {
+  background: var(--page);
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.muted {
+  color: var(--ink-2);
+}
+.faint {
+  color: var(--ink-3);
+}
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

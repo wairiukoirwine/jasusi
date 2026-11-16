@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "JASUSI — scam check",
+  "version": "0.2.0",
+  "description": "Right-click a link or selected text to check it for scams. Links are analysed as text and never opened.",
+  "permissions": ["contextMenus", "storage"],
+  "host_permissions": ["http://localhost:8000/*", "http://127.0.0.1:8000/*"],
+  "optional_host_permissions": ["https://*/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_title": "JASUSI scam check", "default_popup": "popup.html" },
+  "options_page": "options.html"
+}

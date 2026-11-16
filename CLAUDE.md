@@ -125,10 +125,17 @@ Response shape:
 
 ## Common commands
 ```bash
-docker compose up -d                     # postgres + redis
-cd backend && uvicorn app.main:app --reload
-pytest backend/tests -q
+docker compose up -d                              # postgres + redis + mlflow (optional for local dev)
+uvicorn app.main:app --app-dir backend --reload   # run from the repo root
+ruff check . && black --check . && pytest -q
 python -m ml.training.train_text --config ml/configs/text_baseline.yaml
-mlflow ui
+python -m ml.training.evaluate                    # rewrites docs/reports/*.md from a real run
+mlflow ui --backend-store-uri sqlite:///mlflow.db
 cd dashboard && npm run dev
 ```
+
+## Current state (keep this honest)
+- Serving model is the TF-IDF + LR baseline (joblib), not a transformer; categories come from keyword rules.
+- Local dev defaults to SQLite and an in-memory cache; Postgres/Redis are opt-in via `.env`.
+- Tables are created at startup; add Alembic with the first schema change that needs a migration.
+- Never quote a metric that is not in `docs/reports/` from a real run. Never tune on the frozen test set.

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>JASUSI settings</title>
+    <style>
+      body { max-width: 460px; margin: 32px auto; font: 15px/1.5 system-ui, sans-serif; color-scheme: light dark; }
+      label { display: block; margin-top: 16px; font-weight: 600; }
+      input { width: 100%; box-sizing: border-box; padding: 8px; margin-top: 4px; font: inherit; }
+      button { margin-top: 16px; padding: 8px 16px; font: inherit; }
+      p { color: gray; font-size: 13px; }
+    </style>
+  </head>
+  <body>
+    <h1>JASUSI settings</h1>
+    <label>API address <input id="apiBase" placeholder="http://localhost:8000" /></label>
+    <p>Where your JASUSI server runs. A non-local address must use https; the browser will ask for permission to contact it.</p>
+    <label>API key (optional) <input id="apiKey" type="password" autocomplete="off" /></label>
+    <button id="save">Save</button> <span id="status" role="status"></span>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

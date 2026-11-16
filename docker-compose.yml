@@ -1,6 +1,26 @@
 # Local development services. Ports are bound to localhost only.
 # Credentials here are dev placeholders that match .env.example; never reuse them in a deployment.
 services:
+  # The API + web app. Start everything with: docker compose --profile app up -d --build
+  api:
+    profiles: ["app"]
+    build: .
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: postgresql+psycopg://jasusi:jasusi@postgres:5432/jasusi
+      REDIS_URL: redis://redis:6379/0
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./ml/models:/srv/ml/models:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
   postgres:
     image: postgres:16-alpine
     environment:

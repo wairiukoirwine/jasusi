@@ -1,0 +1,11 @@
+version: text-afroxlmr-v1
+base_model: Davlan/afro-xlmr-base   # alternative: distilbert-base-multilingual-cased
+train: data/processed/sms_train_v1.csv
+val: data/processed/sms_val_v1.csv
+extra_train: data/processed/sms_synth_ke_legit_v1.csv
+output_dir: ml/models/text_transformer
+max_length: 160
+epochs: 3
+batch_size: 32
+learning_rate: 2.0e-5
+seed: 42

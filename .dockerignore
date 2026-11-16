@@ -1,0 +1,9 @@
+.git
+.venv
+data
+mlruns
+*.db
+**/node_modules
+dashboard/dist
+ml/models
+.env

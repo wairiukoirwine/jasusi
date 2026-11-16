@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      :root { color-scheme: light dark; --ink: #0b0b0b; --ink2: #52514e; --line: #e1e0d9; --bg: #fcfcfb; }
+      @media (prefers-color-scheme: dark) { :root { --ink: #f0efec; --ink2: #c3c2b7; --line: #2c2c2a; --bg: #1a1a19; } }
+      body { width: 340px; margin: 0; padding: 14px; font: 14px/1.4 system-ui, sans-serif; color: var(--ink); background: var(--bg); }
+      h1 { font-size: 15px; margin: 0 0 8px; }
+      textarea { width: 100%; box-sizing: border-box; min-height: 70px; padding: 8px; border: 1px solid var(--line); border-radius: 8px; font: inherit; background: transparent; color: inherit; }
+      button { margin-top: 8px; width: 100%; padding: 8px; border: 0; border-radius: 8px; background: #2a78d6; color: #fff; font-weight: 600; cursor: pointer; }
+      #result { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 12px; }
+      .verdict { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600; }
+      .dot { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; color: #fff; }
+      .score { margin-left: auto; font-variant-numeric: tabular-nums; }
+      ul { margin: 8px 0 0; padding-left: 18px; }
+      .muted { color: var(--ink2); font-size: 12px; word-break: break-all; }
+      a { color: inherit; }
+    </style>
+  </head>
+  <body>
+    <h1>JASUSI scam check</h1>
+    <textarea id="input" placeholder="Paste a message or link"></textarea>
+    <button id="check">Check now</button>
+    <div id="result" hidden></div>
+    <p class="muted" style="margin-top:12px">Risk guidance, not a guarantee. <a href="options.html" target="_blank">Settings</a></p>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
