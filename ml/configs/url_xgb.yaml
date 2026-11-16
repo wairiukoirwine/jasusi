@@ -1,0 +1,14 @@
+version: url-xgb-v1
+train: data/processed/urls_train_v1.csv
+val: data/processed/urls_val_v1.csv
+test: data/processed/urls_test_v1.csv
+output: ml/models/url/current.json
+params:
+  max_depth: 6
+  eta: 0.1
+  subsample: 0.8
+  colsample_bytree: 0.8
+  min_child_weight: 5
+num_boost_round: 600
+early_stopping_rounds: 30
+seed: 42

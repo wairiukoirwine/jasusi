@@ -128,7 +128,7 @@ Response shape:
 docker compose up -d                     # postgres + redis
 cd backend && uvicorn app.main:app --reload
 pytest backend/tests -q
-python ml/training/train_text.py --config ml/configs/text_baseline.yaml
+python -m ml.training.train_text --config ml/configs/text_baseline.yaml
 mlflow ui
 cd dashboard && npm run dev
 ```

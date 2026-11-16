@@ -1,0 +1,40 @@
+{
+  "seed": 42,
+  "fractions": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "files": {
+    "sms_train_v1.csv": {
+      "rows": 13948,
+      "malicious": 8234,
+      "sha256": "c75223d505fbc990bc81568b3e633aeedb055274a81af3b4d6ab37b8632a0f38"
+    },
+    "sms_val_v1.csv": {
+      "rows": 2980,
+      "malicious": 1756,
+      "sha256": "4048d0d95dda87188d7605c07ddbbdf4b1b6d2dc8ea955297ad9e2dbc5ce5684"
+    },
+    "sms_test_v1.csv": {
+      "rows": 2976,
+      "malicious": 1752,
+      "sha256": "c6eab4aa05841206e6cf31b7271e3e44d7c478eb29563d64e27a80a32d875e64"
+    },
+    "urls_train_v1.csv": {
+      "rows": 348952,
+      "malicious": 96381,
+      "sha256": "af18eb93ee0433c75e1d715f7024a03900f70aea1af54247fa9fd792d82917b8"
+    },
+    "urls_val_v1.csv": {
+      "rows": 63450,
+      "malicious": 18667,
+      "sha256": "0ed9188f9354e99904b08ac8e934c617f8bc8bd049634946401e6167dc83b7b6"
+    },
+    "urls_test_v1.csv": {
+      "rows": 66676,
+      "malicious": 18736,
+      "sha256": "ba91d91bcec7bd85d9eee2d80b9bcbd7448f45fe5102f7a3adfce93f76791185"
+    }
+  }
+}

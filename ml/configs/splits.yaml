@@ -1,0 +1,12 @@
+seed: 42
+fractions: {train: 0.70, val: 0.15, test: 0.15}
+sms:
+  input: data/processed/sms_v0.csv
+  # IMC'25 is 100% scam/spam and mostly non-African. Capping it stops the model from
+  # learning "this looks like IMC'25" instead of "this is a scam".
+  max_rows_per_source: {imc25_smishing: 9000}
+urls:
+  input: data/processed/urls_v0.csv
+  max_rows_per_source: {jpcert_phishurl: 100000}
+output_dir: data/processed
+lock_file: ml/configs/splits_v1.lock.json

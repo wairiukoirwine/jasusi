@@ -1,0 +1,14 @@
+version: text-tfidf-lr-v2
+train: data/processed/sms_train_v1.csv
+val: data/processed/sms_val_v1.csv
+test: data/processed/sms_test_v1.csv
+# Synthetic Kenyan legit messages (training only; see ml/training/synth_kenyan_legit.py).
+# Remove this line to train on real data only.
+extra_train: data/processed/sms_synth_ke_legit_v1.csv
+output: ml/models/text/current.joblib
+word_ngrams: [1, 2]
+char_ngrams: [2, 5]
+max_char_features: 200000
+# Regularisation strengths compared on the validation set (never on test).
+c_grid: [0.5, 2.0, 8.0]
+seed: 42

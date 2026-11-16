@@ -6,8 +6,11 @@ from pydantic import BaseModel
 
 
 class HealthResponse(BaseModel):
-    """Liveness report. Dependency checks (db, redis) are added when those arrive."""
+    """Liveness report, including which detector versions are serving."""
 
     status: Literal["ok"]
     version: str
     environment: str
+    text_model: str
+    url_model: str
+    threat_intel_enabled: bool

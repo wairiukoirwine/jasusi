@@ -27,3 +27,6 @@ dist/
 .DS_Store
 .vscode/
 .idea/
+mlflow.db
+*.db
+mlartifacts/
